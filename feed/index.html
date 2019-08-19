@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="text/javascript">
+  var iraConfig = iraConfig || {"variables": {}, "api_url": "https://www.11stedenzwemtocht.nl/api", "config_url": "https://libs.iraiser.eu/users/maarten/iraApp_config.json"};
+    </script>
+    <script src="https://libs.iraiser.eu/libs/iraApp/beta-v2.0/iraApp.js" type="text/javascript"></script>
+    <meta property="ira:team" content="5d1ce568-1f81-4934-80a9-0f178872d078"/>
+  <!--  <meta property="ira:event" content="25c58969-d822-45a5-a829-4cb05ef53e8f"/>-->
+
+  </head>
+  <body class="ira-app">
+    <div class="wrapper">
+      <img class="logo" src="./logo.png" alt="" />
+      <h2>Samle inn til Kreftforeningens arbeid</h2>
+      <div class="image__wrapper">
+
+        <img class="image" src="./image.png" alt="" />
+        <div class="monetary">
+
+          <div class="wrapper__inner">
+            <div id="amountGraphic" class="amount__graphic"></div>
+            <div class="amount__numbers">
+              <div class="amount__current">3000</div>
+              <hr />
+              <div class="amount__goal">100000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3>Finnmarksløpet 2019, en innsamling over vidda.</h3>
+      <div class="cta">Gi en gave</div>
+      <div id="donations" class="donations">
+        <div class="donation" data-ira-for="team.gifts">
+          <div class="donation__amount">
+            <var>{{ gift.amount_formatted }}</var>
+          </div>
+          <div>
+            <div class="donation__top">
+              <h1><var>{{ gift.owner.firstname }}</var>
+              <var>{{ gift.owner.lastname }}</var></h1>
+            </div>
+
+            <div class="donation__info">
+              <var>{{gift.comment}}</var>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./bundle.js"></script>
+</html>

@@ -1,0 +1,235 @@
+$margin-small: 1px;
+$margin-big: 10px;
+$diglettColor: red;
+$buttonColor: red;
+@mixin screen800px{
+  @media screen and (min-width: 800px){
+    @content
+  }
+}
+*{
+  font-family: Sans-serif
+}
+body{
+  overflow:hidden;
+  max-width: 280px;
+}
+.wrapper{
+  position: relative;
+    order: none;
+    width: 100%;
+    height: 610px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.logo{
+  width:50%;
+  display: block;
+
+}
+
+.image__wrapper{
+  display: inline-block;
+  position: relative;
+  left:50%;
+  transform:translateX(-50%);
+  width: 100%;
+
+}
+.image{
+  width:100%;
+}
+.monetary{
+  position: absolute;
+width: 100px;
+height: 100px;
+bottom: 0;
+background: white;
+left: 50%;
+transform: translate(-50%,50%);
+border-radius: 100000px;
+border-style: solid;
+    border-color: gainsboro;
+    border-width: 1px;
+}
+.wrapper__inner{
+  background: orange;
+    height: 95%;
+    width: 95%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    overflow: hidden
+}
+.amount__graphic{
+  width:100%;
+  height:100%;
+  background-color: white;
+  transition: height 1s ease-out
+}
+.box__gradient-transparent{
+  background: linear-gradient(rgba(0,0,0,0),rgba(255,255,255,1));
+    height: 27%;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.amount__numbers{
+  width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.donations{
+  height: 50%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 1.4em;
+}
+.donation__amount{
+  padding-top:7px
+}
+.subtitle{
+    text-align: center;
+    display: block;
+}
+.donation{
+  display: flex;
+  flex-direction: row;
+position: relative;
+background: white;
+border-style: solid;
+border-color: gainsboro;
+border-width: 1px;
+padding: 15px;
+margin-bottom: 25px;
+max-height: 200px;
+
+}
+
+.donation__1-big,.donation__2-big,.donation__3-big,.donation__4-big,.donation__5-big{
+  display: inline-block;
+  width:100%
+}
+.donation__info{
+  display: flex;
+  flex-direction: column;
+  flex:6;
+
+}
+.donation__top{
+  flex:1;
+  padding-right: 10px;
+  position: relative;
+
+}
+.donation__top,.donation__info{
+  padding-left: 30px;
+}
+.donation__top>p{
+  display: inline-block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+
+}
+.donation__top h1{
+  display:inline-block;
+  margin-block-start: 0;
+  font-size: 100%;
+    margin-block-end: 0;
+}
+.donation-out{
+  transform: translate(-50%,-100%);
+max-height: 0;
+padding: 0;
+overflow: hidden;
+margin: 0;
+border: 0;
+opacity:0;
+transition: opacity 0.1s,transform 0.2s,max-height 0.2s,padding 0.2s,margin 0.2s, border 0.2s
+}
+h3,h2{
+  text-align: center;
+  margin-block-start: 0.4em;
+  margin-block-end: 0.4em;
+}
+h3{
+  position: relative;
+}
+.cta{
+background: $buttonColor;
+color: white;
+padding: 10px;
+text-align: center;
+}
+.progress__diglett{
+      width: 5px;
+      height: 5px;
+      background: $diglettColor;
+      margin: 0 2px;
+      border-radius: 2.5px;
+      opacity:0;
+      transition:opacity 1s,height 300ms;
+  }
+.progress__diglett-in{
+  opacity:1;
+  height: 5px;
+}
+.progress__diglett-active{
+  opacity: 1;
+    height: 20px;
+}
+.progress__diglett-active-medium{
+  opacity: 1;
+    height: 15px;
+}
+.progress__diglett-active-small{
+  opacity: 1;
+    height: 10px;
+}
+  .progress__diglett_container{
+    display: inline-flex;
+align-items: center;
+height: 20px;
+position: relative;
+  }
+  .subwrapper{
+    position: relative;
+
+  }
+  .progress{
+    position: relative;
+    margin: 10px 0;
+    display: inline-flex;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+  .progress__spacer-left, .progress__spacer-right{
+    height: 10px;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-color: rgba(100,100,100,1);
+  }
+  .progress__spacer-left{
+    margin-left: $margin-big;
+    margin-right:$margin-small
+  }
+  .progress__spacer-right{
+    margin-left: $margin-small;
+    margin-right:$margin-big
+  }
+  .amount{
+    display: inline-block;
+    opacity:0;
+    font-size: 65%;
+    transition: opacity 500ms
+  }
+  .amount-in{
+    opacity:1
+  }
